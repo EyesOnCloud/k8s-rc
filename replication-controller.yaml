@@ -5,15 +5,13 @@ metadata:
 spec:
   replicas: 3
   selector:
-    app: nginx
+    tier: webserver
   template:
     metadata:
       name: nginx
       labels:
-        app: nginx
+        tier: webserver
     spec:
       containers:
       - name: nginx
         image: nginx
-        ports:
-        - containerPort: 80
